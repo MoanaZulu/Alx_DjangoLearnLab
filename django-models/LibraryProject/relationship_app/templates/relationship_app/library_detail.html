@@ -51,3 +51,8 @@
 </ul>
 </body>
 </html>
+
+
+{% for book in library.books.all %}
+    <li>{{ book.title }} by {{ book.author.name }}</li>
+{% endfor %}
