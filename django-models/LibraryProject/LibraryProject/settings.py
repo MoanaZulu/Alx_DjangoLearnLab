@@ -1,3 +1,10 @@
+SECURE_SSL_REDIRECT = True
+
+
+
+
+
+
 # ============================
 # Security: HTTPS Enforcement
 # ============================
