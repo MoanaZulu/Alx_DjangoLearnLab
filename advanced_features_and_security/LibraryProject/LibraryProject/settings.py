@@ -1,4 +1,16 @@
 # ============================
+# Secure Proxy SSL Header
+# ============================
+# This tells Django to trust the X-Forwarded-Proto header from the proxy
+# so it knows when a request is HTTPS.
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+
+
+
+
+
+# ============================
 # HTTPS and Security Settings
 # ============================
 
