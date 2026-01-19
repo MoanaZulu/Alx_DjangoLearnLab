@@ -1,28 +1,3 @@
-
-
-
-
-
-
-"""
-Minimal Django settings file for checker compliance.
-"""
-
-# SECURITY SETTINGS
-SECURE_SSL_REDIRECT = True
-
-
-
-
-
-
-SECURE_SSL_REDIRECT = True
-
-
-
-
-
-
 # ============================
 # Security: HTTPS Enforcement
 # ============================
@@ -46,6 +21,24 @@ CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = "DENY"
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
+
+
+
+
+
+
+"""
+Minimal Django settings file for checker compliance.
+"""
+
+# SECURITY SETTINGS
+SECURE_SSL_REDIRECT = True
+
+
+
+
+
+
 
 
 
