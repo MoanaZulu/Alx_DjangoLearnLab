@@ -1,3 +1,34 @@
+# LibraryProject — Permissions and Groups
+
+## Objective
+Implement and manage permissions and groups to control access to various parts of the Django application.
+
+## Custom Permissions
+Defined in `models.py`:
+- `can_view`
+- `can_create`
+- `can_edit`
+- `can_delete`
+
+## Groups
+Configured in Django Admin:
+- **Viewers** → assigned `can_view`
+- **Editors** → assigned `can_create`, `can_edit`
+- **Admins** → assigned all permissions (`can_view`, `can_create`, `can_edit`, `can_delete`)
+
+## Usage in Views
+Views are protected with `@permission_required` decorators.  
+Example:
+```python
+@permission_required('LibraryProject.can_edit', raise_exception=True)
+def book_edit(request, pk):
+    ...
+
+
+
+
+
+
 # Advanced Features and Security — Permissions & Groups
 
 ## Objective
