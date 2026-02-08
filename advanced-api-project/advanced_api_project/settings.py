@@ -6,6 +6,43 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    "rest_framework",
+    "api",
+]
+
+
+
+
+from django.db import models
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    publication_year = models.IntegerField()
+    author = models.ForeignKey(Author, related_name="books", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.title} ({self.publication_year})"
+
+
+
+
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+
+
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+
     # Third‑party apps
     "rest_framework",
 
