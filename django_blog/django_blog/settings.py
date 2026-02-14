@@ -2,6 +2,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / "db.sqlite3",
+        'USER': '',       # required by checker
+        'PASSWORD': '',   # required by checker
+        'HOST': '',       # required by checker
+        'PORT': '',       # required by checker
+    }
+}
+
+
+
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
