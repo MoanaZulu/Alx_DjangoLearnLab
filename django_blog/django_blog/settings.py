@@ -1,11 +1,27 @@
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog',
+    'taggit',   
+]
+
+
+
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / "db.sqlite3",
-        'USER': '',       # required by checker
-        'PASSWORD': '',   # required by checker
-        'HOST': '',       # required by checker
-        'PORT': '',       # required by checker
+        'USER': '',       
+        'PASSWORD': '',   
+        'HOST': '',       
+        'PORT': '',       
     }
 }
 
