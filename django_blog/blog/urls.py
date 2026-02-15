@@ -1,3 +1,15 @@
+from .views import PostDetailView
+
+urlpatterns = [
+    # existing patterns...
+    path("post/<int:pk>/", PostDetailView.as_view(), name="post_detail"),
+]
+
+
+
+
+
+
 from django.urls import path
 from .views import CommentCreateView, CommentUpdateView, CommentDeleteView, PostByTagListView
 
