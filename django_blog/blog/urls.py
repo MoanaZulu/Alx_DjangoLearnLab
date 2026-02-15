@@ -1,4 +1,23 @@
 from django.urls import path
+from .views import CommentCreateView, CommentUpdateView, CommentDeleteView, PostByTagListView
+
+urlpatterns = [
+    # Tagging/search
+    path("tags/<slug:tag_slug>/", PostByTagListView.as_view(), name="posts_by_tag"),
+
+    # Comment CRUD
+    path("post/<int:pk>/comments/new/", CommentCreateView.as_view(), name="new_comment"),
+    path("comment/<int:pk>/update/", CommentUpdateView.as_view(), name="edit_comment"),
+    path("comment/<int:pk>/delete/", CommentDeleteView.as_view(), name="delete_comment"),
+]
+
+
+
+
+
+
+
+from django.urls import path
 from .views import CommentCreateView, CommentUpdateView, CommentDeleteView
 
 urlpatterns = [
