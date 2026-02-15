@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/style.css' %}">
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+form {
+  margin: 20px auto;
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
