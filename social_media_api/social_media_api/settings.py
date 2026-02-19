@@ -1,3 +1,10 @@
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+
+
+
+
+
 """
 Django settings for social_media_api project.
 
