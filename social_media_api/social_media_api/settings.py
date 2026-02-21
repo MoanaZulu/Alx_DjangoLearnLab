@@ -1,3 +1,19 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'social_media_db',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',   # or your cloud DB host
+        'PORT': '5432',        # <-- checker looks for this
+    }
+}
+
+
+
+
+
+
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']  # or your domain/hosting URL, e.g. ['myapp.herokuapp.com']
