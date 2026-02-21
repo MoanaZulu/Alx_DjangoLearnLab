@@ -1,3 +1,18 @@
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']  # or your domain/hosting URL, e.g. ['myapp.herokuapp.com']
+
+# Security settings
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_SSL_REDIRECT = False  # set to True if you have HTTPS enabled
+
+
+
+
+
+
 INSTALLED_APPS = [
     ...,
     'rest_framework',
