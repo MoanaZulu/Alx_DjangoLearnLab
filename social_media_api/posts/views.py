@@ -1,3 +1,23 @@
+from rest_framework import generics, permissions
+from rest_framework.response import Response
+from .models import Post
+from .serializers import PostSerializer
+
+class FeedView(generics.ListAPIView):
+    serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        # Get all users the current user is following
+        following_users = self.request.user.following.all()
+        # Return posts authored by those users, ordered by creation date (newest first)
+        return Post.objects.filter(author__in=following_users).order_by('-created_at')
+
+
+
+
+
+
 from rest_framework import viewsets, permissions, filters
 from .models import Post, Comment
 from .serializers import PostSerializer, CommentSerializer
