@@ -1,5 +1,15 @@
 INSTALLED_APPS = [
     ...,
+    'notifications',
+]
+
+
+
+
+
+
+INSTALLED_APPS = [
+    ...,
     'accounts',
     'posts',
     'notifications',
