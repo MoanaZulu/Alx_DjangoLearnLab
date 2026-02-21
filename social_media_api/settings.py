@@ -1,3 +1,9 @@
+
+
+
+
+
+
 from django.urls import path, include
 
 urlpatterns = [
@@ -20,7 +26,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'accounts',
-    'posts',   # <-- add this once posts app is created
+    'posts',   
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
