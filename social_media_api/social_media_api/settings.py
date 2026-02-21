@@ -1,3 +1,15 @@
+INSTALLED_APPS = [
+    ...,
+    'accounts',
+    'posts',
+    'notifications',
+]
+
+
+
+
+
+
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'   # <-- checker looks for this
