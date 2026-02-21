@@ -1,3 +1,15 @@
+from django.urls import path, include
+
+urlpatterns = [
+    path('accounts/', include('accounts.urls')),
+    path('', include('posts.urls')),
+]
+
+
+
+
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
